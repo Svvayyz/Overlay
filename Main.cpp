@@ -17,7 +17,7 @@ INT APIENTRY WinMain(
 	const HWND hParentWindow = fnGetParentWindow( );
 	const Overlay overlay = Overlay( L"SAMPLE_CLASS_NAME", L"SAMPLE_WINDOW_NAME" );
 
-	if ( !overlay.Init( ) ) {
+	if ( !overlay.Init( hParentWindow ) ) {
 		overlay.Destroy( );
 
 		return 0;
