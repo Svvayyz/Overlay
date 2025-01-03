@@ -18,15 +18,8 @@
 
 #include <functional>
 #include <thread>
-#include <string>
-#include <vector>
 
 using std::function;
 using std::thread;
-using std::string;
-using std::exception;
-using std::array;
-using std::tuple;
-using std::vector;
 
 #include "Overlay.h"
