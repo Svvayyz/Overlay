@@ -15,7 +15,7 @@ void Overlay::Start( function<void( Overlay* )> fnRenderFunc ) {
 
 	thread.detach( );
 }
-void Overlay::_Start( function<void( Overlay* )> fnRenderFunc ) {
+void Overlay::_Start( function<void( Overlay* )>& fnRenderFunc ) {
 	while ( Running ) {
 		_HandleMsg( ); // this function can change running, break if it did
 
@@ -27,7 +27,7 @@ void Overlay::_Start( function<void( Overlay* )> fnRenderFunc ) {
 
 	Destroy( );
 }
-void Overlay::Render( function<void( Overlay* )> fnRenderFunc ) {
+void Overlay::Render( function<void( Overlay* )>& fnRenderFunc ) {
 	ImGui_ImplDX11_NewFrame( );
 	ImGui_ImplWin32_NewFrame( );
 
