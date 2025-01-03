@@ -12,8 +12,8 @@ public:
 public:
 	bool Init( HWND& hParentWindow );
 
-	void Start( function<void( Overlay* )> fnRenderFunc );
-	void Render( function<void( Overlay* )> fnRenderFunc );
+	void Start( function<void( Overlay* )>& fnRenderFunc );
+	void Render( function<void( Overlay* )>& fnRenderFunc );
 	void Destroy( );
 
 private:
