@@ -11,7 +11,7 @@ INT APIENTRY WinMain(
 	Overlay::hInstance = hInstance;
 
 	const auto fnGetParentWindow = [ ] ( ) {
-		return FindWindowA( "UnityWndClass", nullptr );
+		return FindWindowA( "SOME_PARENT_WINDOW_CLASS_NAME", "SOME_PARENT_WINDOW_NAME" );
 	};
 
 	HWND hParentWindow = fnGetParentWindow( );
